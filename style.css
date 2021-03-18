@@ -7,27 +7,29 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .container{
-    margin: 0 150px;
+    max-width: 1277px;
+    margin: 0 auto;
+}
+p{
+    font-size: 15px;
 }
 #active{
     color: #307253;
 }
-/* ===================      Header      ========================== */
-
-.header__top{
+.header-top{
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
 }
-.header__top .menu{
+.header-top .navbar{
     display: flex;
 }
-.header__top .menu li{
+.header-top .navbar .nav-item{
     list-style: none;
 }
-.header__top .menu li a{
+.header-top .navbar .nav-item a{
     display: block;
     width: 102px;
     text-align: center;
@@ -35,7 +37,7 @@ body{
     font-weight: bold;
     color: black;
 }
-.header__top .menu li a:hover{
+.header-top .navbar .nav-item a:hover{
     color: #307253;
 }
 .account{
@@ -46,36 +48,36 @@ body{
     width: 50px;
     padding-top: 5px;
 }
-.account .login{
+.account .nav-login{
     display: flex;
 }
-.account .login li{
+.account .nav-login li{
     list-style: none;
 }
-.account .login li:first-child{
+.account .nav-login li:first-child{
     border-right: 2px solid;
 }
-.account .login li a{
+.account .nav-login li a{
     display: block;
     padding: 0 10px;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-.account .login li a:hover{
+.account .nav-login li a:hover{
     color: #307253;
 }
 
-.header__main{
+.header-main{
     margin: 0 140px;
 }
-.list__select--box{
+.list-select-box{
     display: flex;
 }
-.list__select--box li{
+.list-select-box li{
     list-style: none;
 }
-.list__select--box li a{
+.list-select-box li a{
     display: block;
     height: 60px;
     width: 150px;
@@ -89,72 +91,140 @@ body{
     color: #808285;
     color: black;
 }
-.list__select--box #active{
+.list-select-box #active{
     background: #333333;
     color: #e0e0e0;
 }
-.search__form{
+.search-form{
     display: flex;
     height: 60px;
     background-color: #307253;
     align-items: center;
 }
-.search__form .input{
+.search-form .input{
     width: 95%;
     margin: 10px;
 }
-.search__form .input input{
+.search-form .input input{
     height: 45px;
     width: 100%;
 
 }
-.search__form .button{
+.search-form .button{
     width: 5%;
     color: white;
     font-size: 30px;
     padding-left: 2px;
 }
+.banner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .banner img{
     width: 100%;
-    margin: 50px 0 40px 0;
 }
-
-.hot__project h1{
-    font-size: 45px;
-    font-weight: normal;
+/* =========================================================================================================== */
+.title p{
+    font-size: 34px;
+    margin-bottom: 25px;
 }
-.hot__project--desc{
+.potential-project .intro{
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: 6fr 4fr;
-    margin-bottom: 40px;
 }
-.hot__project--desc .image img{
-    width: 100%;
+.potential-project .intro .image img{
+    max-width: 100%;
 }
-.hot__project--desc .content{
-    padding-left: 40px;
+.potential-project .intro .content{
+    margin-left: 50px;
 }
-.hot__project--desc .content h3{
-    font-size: 25px;
-    font-weight: normal;
-    padding-bottom: 100px;
+.potential-project .intro .content .content-title{
+    margin-bottom: 130px;
 }
-.hot__project--desc p{
-    text-align: justify;
-    line-height: 1.8;
+.potential-project .intro .content .content-title p{
+    font-size: 26px;
 }
-.hot__project--info{
+.potential-project .intro .content .content-text p{
+    font-size: 17px;
+    line-height: 27px;
+}
+/* ================================ */
+.strong{
+    font-weight: bold;
+}
+.project-detail{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
 }
-.hot__project--info .content{
-    background-color: #808285;
-    height: 800px;
+.project-detail .image img{
+    width: 100%;
 }
-.hot__project--info .content h3{
-    font-size: 25px;
-    font-weight: normal;
+.project-detail .content{
+    margin-right: 20px;
+    border-bottom: 3px solid #e6e7e8;
 }
-.hot__project--info .image img{
+.project-detail .content-title{
+    margin-bottom: 20px;
+}
+.project-detail .content-title p{
+    font-size: 26px;
+}
+.project-detail .content .row p{
+    font-size: 17px;
+}
+.project-detail .content .row{
+    padding-bottom: 8px;
+    line-height: 25px;
+}
+.project-detail .content .button{
+    float: right;
+    margin-top: 50px;
+}
+.project-detail .content .button a{
+    text-decoration: none;
+    display: block;
+    background-color: #333333;
+    color: #f54237;
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 8px;
+}
+/* ========================================= */
+.list-home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 50px;
+}
+.list-home .col .image img{
+    width: 100%;
+}
+.list-home .col .home-name{
+    margin: 8px 0;
+}
+.list-home .col .home-name p{
+    font-size: 17px;
+}
+.list-home .col .home-info{
+    padding-left: 10px;
+    line-height: 20px;
+    border-left: 3px solid #e6e7e8;
+}
+/* =========================================== */
+.slide-banner .image img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+/* =========================================== */
+.list-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.list-product .box .image img{
     width: 100%;
 }
